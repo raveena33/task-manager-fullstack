@@ -1,34 +1,62 @@
-# Task Manager API (Flask)
+# Task Manager – Full Stack App
 
-A simple RESTful API built using Python and Flask for managing tasks.
+A simple full-stack Task Manager application built using Flask (Python) for the backend and vanilla HTML/CSS/JavaScript for the frontend. The app allows users to add, view, and delete tasks.
 
 ## Features
 
-- Add new tasks  
-- View all tasks  
-- Update task status  
-- Delete tasks  
-- JSON input/output  
-- Built-in error handling
+- Add new tasks with a title
+- View all tasks and their statuses
+- Delete tasks from the list
+- Clean UI using plain HTML/CSS
+- RESTful API with Flask
+- Cross-Origin Resource Sharing (CORS) support
 
-## Endpoints
+## Technologies Used
 
-- `GET /tasks` – List all tasks  
-- `POST /tasks` – Create a new task (`{ "title": "Task name" }`)  
-- `PUT /tasks/<id>` – Update a task’s status (`{ "status": "done" }`)  
-- `DELETE /tasks/<id>` – Remove a task
+**Backend**
+- Python
+- Flask
+- Flask-CORS
+
+**Frontend**
+- HTML
+- CSS
+- JavaScript (Fetch API)
+
+## Project Structure
+
+task-manager-fullstack/
+│
+├── backend/
+│ ├── app.py
+│ └── venv/ 
+│
+├── frontend/
+│ ├── index.html
+│ ├── style.css
+│ └── script.js
 
 ## How to Run
 
-```bash
-# 1. Create a virtual environment
-python -m venv venv
+### Backend (Flask)
+1. Navigate to `backend/`:
+    ```bash
+    cd backend
+    python -m venv venv
+    .\venv\Scripts\activate      # Windows
+    pip install flask flask-cors
+    python app.py
+    ```
 
-# 2. Activate the environment
-.\venv\Scripts\Activate
+2. Flask will run on: `http://127.0.0.1:5000`
 
-# 3. Install Flask
-pip install flask
+### Frontend (Static Server)
+1. Navigate to `frontend/`:
+    ```bash
+    cd frontend
+    python -m http.server 5500
+    ```
 
-# 4. Start the app
-python app.py
+2. Open your browser at:  
+   `http://127.0.0.1:5500/index.html`
+

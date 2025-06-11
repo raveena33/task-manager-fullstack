@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     window.deleteTask = deleteTask;
   
-    // Initial load
     loadTasks();
   });
   

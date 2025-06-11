@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # ✅ CORS is properly applied here
+CORS(app, resources={r"/*": {"origins": "*"}})  
 
 tasks = []
 task_id_counter = 1
